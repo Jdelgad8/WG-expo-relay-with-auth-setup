@@ -1,16 +1,25 @@
 import 'react-native-url-polyfill/auto';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View } from 'react-native';
 import { DragonsList } from './components/DragonsList';
 import { WunderGraphRelayProvider } from './lib/wundergraph';
 import { Suspense } from 'react';
+import { createClient } from './.wundergraph/generated/client';
+
+const client = createClient();
 
 export default function App() {
+
 	return (
 		<WunderGraphRelayProvider>
 			<Suspense>
 				<View style={styles.container}>
 					<DragonsList />
+					<Button
+						title="Login with Google"
+						onPress={() => {
+							client.login('google');
+						}} />
 				</View>
 			</Suspense>
 			<StatusBar style="auto" />

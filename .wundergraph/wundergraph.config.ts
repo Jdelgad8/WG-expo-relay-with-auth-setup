@@ -1,4 +1,4 @@
-import { configureWunderGraphApplication, cors, EnvironmentVariable, introspect, templates } from '@wundergraph/sdk';
+import { configureWunderGraphApplication, cors, EnvironmentVariable, introspect, templates, authProviders } from '@wundergraph/sdk';
 import server from './wundergraph.server';
 import operations from './wundergraph.operations';
 
@@ -19,6 +19,17 @@ configureWunderGraphApplication({
 	generate: {
 		codeGenerators: [],
 	},
+	authentication: {
+		cookieBased: {
+			providers: [
+				authProviders.google({
+					id: 'google', // unique id for this provider
+					clientId: new EnvironmentVariable('GOOGLE_CLIENT_ID_WEB'),
+					clientSecret: new EnvironmentVariable('GOOGLE_CLIENT_SECRET_WEB'),
+				}),
+			]
+		}
+	},
 	cors: {
 		...cors.allowAll,
 		allowedOrigins:
@@ -27,7 +38,7 @@ configureWunderGraphApplication({
 						// change this before deploying to production to the actual domain where you're deploying your app
 						'http://localhost:3000',
 				  ]
-				: ['http://localhost:3000', new EnvironmentVariable('WG_ALLOWED_ORIGIN')],
+				: ['https://localhost:19006', new EnvironmentVariable('WG_ALLOWED_ORIGIN')],
 	},
 	security: {
 		enableGraphQLEndpoint: process.env.NODE_ENV !== 'production' || process.env.GITPOD_WORKSPACE_ID !== undefined,

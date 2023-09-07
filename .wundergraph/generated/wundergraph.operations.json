@@ -1,0 +1,48 @@
+{
+"graphql_operation_files": [
+{
+"operation_name": "Continents",
+"api_mount_path": "Continents",
+"file_path": "Continents.graphql",
+"content": "query Continents {countries_continents {name code}}"
+},
+{
+"operation_name": "Countries",
+"api_mount_path": "Countries",
+"file_path": "Countries.graphql",
+"content": "query Countries($filter: countries_CountryFilterInput){countries_countries(filter: $filter){code name capital}}"
+},
+{
+"operation_name": "RelayC11158afcc8e55409b96972f20e26fa1",
+"api_mount_path": "relay/c11158afcc8e55409b96972f20e26fa1",
+"file_path": "relay\\c11158afcc8e55409b96972f20e26fa1.graphql",
+"content": "query RelayC11158afcc8e55409b96972f20e26fa1 {spacex_dragons {name active id}}"
+},
+{
+"operation_name": "RelayCe2342daed4e1960717c581d645e335d",
+"api_mount_path": "relay/ce2342daed4e1960717c581d645e335d",
+"file_path": "relay\\ce2342daed4e1960717c581d645e335d.graphql",
+"content": "query RelayCe2342daed4e1960717c581d645e335d {spacex_dragons {name active id}}"
+}
+],
+"typescript_operation_files": [
+{
+"operation_name": "UsersGet",
+"api_mount_path": "users/get",
+"file_path": "users\\get.ts",
+"module_path": "generated/bundle/operations/users/get"
+},
+{
+"operation_name": "UsersSubscribe",
+"api_mount_path": "users/subscribe",
+"file_path": "users\\subscribe.ts",
+"module_path": "generated/bundle/operations/users/subscribe"
+},
+{
+"operation_name": "UsersUpdate",
+"api_mount_path": "users/update",
+"file_path": "users\\update.ts",
+"module_path": "generated/bundle/operations/users/update"
+}
+]
+}

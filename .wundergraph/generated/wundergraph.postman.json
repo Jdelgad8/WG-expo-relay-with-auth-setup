@@ -1,0 +1,284 @@
+{
+  "item": [
+    {
+      "_": {
+        "postman_id": "operations"
+      },
+      "id": "operations",
+      "name": "operations",
+      "item": [
+        {
+          "id": "Continents",
+          "name": "Continents",
+          "request": {
+            "url": {
+              "path": [
+                "operations",
+                "Continents"
+              ],
+              "host": [
+                "{{apiBaseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET"
+          },
+          "response": [],
+          "event": []
+        },
+        {
+          "id": "Countries",
+          "name": "Countries",
+          "request": {
+            "url": {
+              "path": [
+                "operations",
+                "Countries"
+              ],
+              "host": [
+                "{{apiBaseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET"
+          },
+          "response": [],
+          "event": []
+        },
+        {
+          "_": {
+            "postman_id": "relay"
+          },
+          "id": "relay",
+          "name": "relay",
+          "item": [
+            {
+              "id": "relay/c11158afcc8e55409b96972f20e26fa1",
+              "name": "c11158afcc8e55409b96972f20e26fa1",
+              "request": {
+                "url": {
+                  "path": [
+                    "operations",
+                    "relay",
+                    "c11158afcc8e55409b96972f20e26fa1"
+                  ],
+                  "host": [
+                    "{{apiBaseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET"
+              },
+              "response": [],
+              "event": []
+            },
+            {
+              "id": "relay/ce2342daed4e1960717c581d645e335d",
+              "name": "ce2342daed4e1960717c581d645e335d",
+              "request": {
+                "url": {
+                  "path": [
+                    "operations",
+                    "relay",
+                    "ce2342daed4e1960717c581d645e335d"
+                  ],
+                  "host": [
+                    "{{apiBaseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET"
+              },
+              "response": [],
+              "event": []
+            }
+          ],
+          "event": []
+        },
+        {
+          "_": {
+            "postman_id": "users"
+          },
+          "id": "users",
+          "name": "users",
+          "item": [
+            {
+              "id": "users/get",
+              "name": "get",
+              "request": {
+                "url": {
+                  "path": [
+                    "operations",
+                    "users",
+                    "get"
+                  ],
+                  "host": [
+                    "{{apiBaseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "disabled": true,
+                      "description": {
+                        "content": "Type string, Optional",
+                        "type": "text/plain"
+                      },
+                      "key": "id",
+                      "value": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET"
+              },
+              "response": [],
+              "event": []
+            },
+            {
+              "id": "users/subscribe",
+              "name": "subscribe",
+              "request": {
+                "url": {
+                  "path": [
+                    "operations",
+                    "users",
+                    "subscribe"
+                  ],
+                  "host": [
+                    "{{apiBaseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "disabled": true,
+                      "description": {
+                        "content": "Type string, Optional",
+                        "type": "text/plain"
+                      },
+                      "key": "id",
+                      "value": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET"
+              },
+              "response": [],
+              "event": []
+            },
+            {
+              "id": "UsersUpdate",
+              "name": "update",
+              "request": {
+                "url": {
+                  "path": [
+                    "operations",
+                    "users",
+                    "update"
+                  ],
+                  "host": [
+                    "{{apiBaseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": true,
+                      "description": {
+                        "content": "Type string, Optional",
+                        "type": "text/plain"
+                      },
+                      "key": "id",
+                      "value": ""
+                    },
+                    {
+                      "disabled": true,
+                      "description": {
+                        "content": "Type string, Optional",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": ""
+                    },
+                    {
+                      "disabled": true,
+                      "description": {
+                        "content": "Type string, Optional",
+                        "type": "text/plain"
+                      },
+                      "key": "bio",
+                      "value": ""
+                    }
+                  ]
+                }
+              },
+              "response": [],
+              "event": []
+            }
+          ],
+          "event": []
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:9991",
+      "key": "apiBaseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "Wundergraph",
+    "name": "Wundergraph",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Your Wundergraph collection",
+      "type": "text/plain"
+    }
+  }
+}
