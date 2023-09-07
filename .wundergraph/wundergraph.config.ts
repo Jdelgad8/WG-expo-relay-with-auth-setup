@@ -13,34 +13,42 @@ const spaceX = introspect.graphql({
 
 // configureWunderGraph emits the configuration
 configureWunderGraphApplication({
-	apis: [countries, spaceX],
-	server,
-	operations,
-	generate: {
-		codeGenerators: [],
-	},
-	authentication: {
-		cookieBased: {
-			providers: [
-				authProviders.google({
-					id: 'google', // unique id for this provider
-					clientId: new EnvironmentVariable('GOOGLE_CLIENT_ID_WEB'),
-					clientSecret: new EnvironmentVariable('GOOGLE_CLIENT_SECRET_WEB'),
-				}),
-			]
-		}
-	},
-	cors: {
-		...cors.allowAll,
-		allowedOrigins:
-			process.env.NODE_ENV === 'production'
-				? [
-						// change this before deploying to production to the actual domain where you're deploying your app
-						'http://localhost:3000',
-				  ]
-				: ['https://localhost:19006', new EnvironmentVariable('WG_ALLOWED_ORIGIN')],
-	},
-	security: {
-		enableGraphQLEndpoint: process.env.NODE_ENV !== 'production' || process.env.GITPOD_WORKSPACE_ID !== undefined,
-	},
+  apis: [countries, spaceX],
+  server,
+  operations,
+  generate: {
+    codeGenerators: [],
+  },
+  authentication: {
+    cookieBased: {
+      providers: [
+        authProviders.google({
+          id: "google", // unique id for this provider
+          clientId: new EnvironmentVariable("GOOGLE_CLIENT_ID_WEB"),
+          clientSecret: new EnvironmentVariable("GOOGLE_CLIENT_SECRET_WEB"),
+        }),
+      ],
+    },
+  },
+  cors: {
+    ...cors.allowAll,
+    // allowedOrigins:
+    //   process.env.NODE_ENV === "production"
+    //     ? [
+    //         // change this before deploying to production to the actual domain where you're deploying your app
+    //         "http://localhost:3000",
+    //       ]
+		// 			: [
+		// 				"http://localhost:8081",
+    //         "http://[YOUR_IP]:19006",
+    //         "http://[YOUR_IP]:8081",
+    //         "exp://[YOUR_IP]:8081",
+    //         new EnvironmentVariable("WG_ALLOWED_ORIGIN"),
+    //       ],
+  },
+  security: {
+    enableGraphQLEndpoint:
+      process.env.NODE_ENV !== "production" ||
+      process.env.GITPOD_WORKSPACE_ID !== undefined,
+  },
 });

@@ -77,10 +77,7 @@ var spaceX = import_sdk2.introspect.graphql({
     }
   },
   cors: {
-    ...import_sdk2.cors.allowAll,
-    allowedOrigins: process.env.NODE_ENV === "production" ? [
-      "http://localhost:3000"
-    ] : ["https://localhost:19006", new import_sdk2.EnvironmentVariable("WG_ALLOWED_ORIGIN")]
+    ...import_sdk2.cors.allowAll
   },
   security: {
     enableGraphQLEndpoint: process.env.NODE_ENV !== "production" || process.env.GITPOD_WORKSPACE_ID !== void 0

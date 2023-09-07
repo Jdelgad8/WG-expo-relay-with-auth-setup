@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["../../wundergraph.server.ts"],
-  "sourcesContent": ["import { configureWunderGraphServer } from '@wundergraph/sdk/server';\n\nexport default configureWunderGraphServer(() => ({\n\thooks: {\n\t\tqueries: {\n\t\t\tCountries: {\n\t\t\t\tpreResolve: async ({ operations }) => {},\n\t\t\t},\n\t\t},\n\t\tmutations: {},\n\t},\n}));\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,oBAA2C;AAE3C,IAAO,iCAAQ,0CAA2B,OAAO;AAAA,EAChD,OAAO;AAAA,IACN,SAAS;AAAA,MACR,WAAW;AAAA,QACV,YAAY,OAAO,EAAE,WAAW,MAAM;AAAA,QAAC;AAAA,MACxC;AAAA,IACD;AAAA,IACA,WAAW,CAAC;AAAA,EACb;AACD,EAAE;",
+  "sourcesContent": ["import { configureWunderGraphServer } from '@wundergraph/sdk/server';\n\nexport default configureWunderGraphServer(() => ({\n  // options: {\n  //   serverUrl: \"https://[YOUR_IP]:9991\",\n  //   listen: {\n  //     host: \"[YOUR_IP]\",\n  //     port: \"[YOUR_IP]\",\n  //   },\n  // },\n  hooks: {\n    queries: {\n      Countries: {\n        preResolve: async ({ operations }) => {},\n      },\n    },\n    mutations: {},\n  },\n}));\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,oBAA2C;AAE3C,IAAO,iCAAQ,0CAA2B,OAAO;AAAA,EAQ/C,OAAO;AAAA,IACL,SAAS;AAAA,MACP,WAAW;AAAA,QACT,YAAY,OAAO,EAAE,WAAW,MAAM;AAAA,QAAC;AAAA,MACzC;AAAA,IACF;AAAA,IACA,WAAW,CAAC;AAAA,EACd;AACF,EAAE;",
   "names": []
 }
